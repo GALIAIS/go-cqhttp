@@ -2,8 +2,8 @@ name: release
 
 on:
   push:
-    tags:
-      - 'v*'
+    branches:
+      - dev
 
 jobs:
   goreleaser:
@@ -27,6 +27,7 @@ jobs:
           args: release --clean
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
 
       #- name: Checkout Dist
       #  uses: actions/checkout@v2
