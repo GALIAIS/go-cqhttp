@@ -2,8 +2,9 @@ name: release
 
 on:
   push:
-    branches:
-      - dev
+    branches: [ "dev" ]
+  pull_request:
+    branches: [ "dev" ]
 
 jobs:
   goreleaser:
